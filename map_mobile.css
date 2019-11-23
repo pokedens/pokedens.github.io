@@ -1,0 +1,23 @@
+body
+{
+    position: relative;
+    width: 43vh;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#controls, #map, #details
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#controls:not(.visible), #details:not(.visible) { display: none; }
+
+.den-circle1 { display: none; }

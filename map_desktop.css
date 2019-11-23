@@ -1,0 +1,42 @@
+body
+{
+    position: relative;
+    width: 129vh;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#controls
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 86vh;
+}
+
+#map
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 43vh;
+    right: 43vh;
+}
+
+#details
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 86vh;
+    right: 0;
+}
+#details:not(.visible) #details-thumbnail, #details:not(.visible) #details-box { display: none; }
+
+#controls-open, #controls-close, #controls-apply, #details-close { display: none; }
+
+#details-thumbnail { right: 7vh; }

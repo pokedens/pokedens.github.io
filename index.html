@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        
+        <title>Pokemon Sword/Shield Raid Den Map</title>
+        
+        <link rel="stylesheet" href="map.css" />
+        <link rel="stylesheet" href="map_desktop.css"     media="(min-aspect-ratio: 13/10)" />
+        <link rel="stylesheet" href="map_mobile.css"      media="not (min-aspect-ratio: 13/10)" />
+        <link rel="manifest"   href="manifest.json"  />
+        
+        <script src="map.js"></script>
+    </head>
+    
+    <body>
+        <div id="map">
+            <div id="controls-open"></div>
+        </div>
+        <div id="details">
+            <div id="details-container">
+                <div id="details-close"></div>
+                <img id="details-thumbnail" />
+                <div id="details-box">
+                    <div id="details-title"></div>
+                    <div id="details-common-title"></div>
+                    <div id="details-rare-title"></div>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <div id="controls-container">
+                <div id="controls-close"></div>
+                <div id="controls-panels">
+                    <div class="controls-row">
+                        <div class="controls-panel column">
+                            <div class="controls-label">Species</div>
+                            <select id="species"></select>
+                        </div>
+                    </div>
+                    <div class="controls-row">
+                        <div class="controls-panel row">
+                            <div class="controls-label">Stars</div>
+                            <!--<div id="star-1" class="controls-button"><img src="icon/star_1.png" title="Show 1-star raids" alt="1 star difficulty" /></div>-->
+                            <div id="star-2" class="controls-button"><img src="icon/star_2.png" title="Show 2-star raids" alt="2 star difficulty" /></div>
+                            <div id="star-3" class="controls-button"><img src="icon/star_3.png" title="Show 3-star raids" alt="3 star difficulty" /></div>
+                            <div id="star-4" class="controls-button"><img src="icon/star_4.png" title="Show 4-star raids" alt="4 star difficulty" /></div>
+                            <div id="star-5" class="controls-button"><img src="icon/star_5.png" title="Show 5-star raids" alt="5 star difficulty" /></div>
+                        </div>
+                    </div>
+                    <div class="controls-row">
+                        <div class="controls-panel row">
+                            <div class="controls-label">Version</div>
+                            <div id="ver-sword" class="controls-button"><img src="icon/ver_sword.png" title="Available in Pokémon Sword" alt="Pokémon Sword" /></div>
+                            <div id="ver-shield" class="controls-button"><img src="icon/ver_shield.png" title="Available in Pokémon Shield" alt="Pokémon Shield" /></div>
+                        </div>
+                        <div class="controls-panel row">
+                            <div class="controls-label">Gigantamax</div>
+                            <div id="gmax-no" class="controls-button"><img src="icon/gmax_no.png" title="No Gigantamax Forms" alt="No" /></div>
+                            <div id="gmax-yes" class="controls-button"><img src="icon/gmax_yes.png" title="Only Gigantamax Forms" alt="Yes" /></div>
+                        </div>
+                    </div>
+                    <div class="controls-row">
+                        <div class="controls-panel row">
+                            <div class="controls-label">Ability</div>
+                            <div id="ability-any" class="controls-button">Any</div>
+                            <div id="ability-hidden" class="controls-button">HA</div>
+                        </div>
+                        <div class="controls-panel row">
+                            <div class="controls-label">Gender</div>
+                            <div id="gender-f" class="controls-button"><img src="icon/gender_f.png" title="Guaranteed Female" alt="Female" /></div>
+                            <div id="gender-r" class="controls-button"><img src="icon/gender_r.png" title="Random Gender" alt="Random" /></div>
+                            <div id="gender-m" class="controls-button"><img src="icon/gender_m.png" title="Guaranteed Male" alt="Male" /></div>
+                        </div>
+                    </div>
+                    <div class="controls-row">
+                        <div class="controls-panel column">
+                            <div class="controls-label">Item</div>
+                            <select id="item"></select>
+                        </div>
+                    </div>
+                    <div class="controls-row">
+                        <div id="controls-reset">Clear</div>
+                        <div id="controls-apply">Apply</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="image-overlay">
+            <img id="overlay-image" />
+        </div>
+    </body>
+</html>
