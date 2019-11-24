@@ -146,7 +146,9 @@ let SetSelectedDen = function(den)
     details.classList.add('visible');
     
     const denData = selectedDen.denData;
-    document.getElementById('details-thumbnail').src = ('th/'+denData.id+'.jpg');
+    let thumbnail = document.getElementById('details-thumbnail');
+    thumbnail.removeAttribute('src');
+    thumbnail.src = ('th/'+denData.id+'.jpg');
     document.getElementById('details-title').innerText = denData.name;
     let commonTitle = document.getElementById('details-common-title');
     let rareTitle = document.getElementById('details-rare-title');
@@ -407,7 +409,9 @@ let Load = function()
     document.getElementById('details-thumbnail').addEventListener('click', () =>
     {
         document.getElementById('image-overlay').classList.add('visible');
-        document.getElementById('overlay-image').src = ('img/'+selectedDen.denData.id+'.jpg');
+        let img = document.getElementById('overlay-image');
+        img.removeAttribute('src');
+        img.src = ('img/'+selectedDen.denData.id+'.jpg');
     });
     document.getElementById('image-overlay').addEventListener('click', function(e)
     {
