@@ -42,10 +42,12 @@ html
     top: 0;
     width: 10vh;
     height: 10vh;
-    background: #d2d2d2;
+    background: url(icon/back.png) contain, #d2d2d2;
     border-top-left-radius: 5vh;
     border-bottom-right-radius: 5vh;
 }
+#controls-open { background: center / 5vh no-repeat url(icon/search.png), #d2d2d2 }
+#controls-close, #details-close { background: center / 8vh no-repeat url(icon/back.png), #d2d2d2; }
 
 .den
 {
@@ -153,11 +155,15 @@ html
 
 #details-common-title, #details-rare-title
 {
+    display: block;
     font-size: 90%;
     font-variant: small-caps;
     border-bottom: .2vh solid #000;
     margin-bottom: 2vh;
     margin-top: 1vh;
+    
+    color: unset;
+    text-decoration: unset;
 }
 
 .details-row
@@ -170,12 +176,16 @@ html
 
 .details-button
 {
+    display: block;
     width: 8vh;
     height: 8vh;
     border-radius: 1vh;
     background: #e5e5e5;
     overflow: hidden;
     position: relative;
+    
+    color: unset;
+    text-decoration: unset;
 }
 .details-button.disabled { opacity: 0.5; background: 0; }
 
@@ -317,9 +327,32 @@ img.details-species-bg
 #controls-apply { margin-left: 2vh; flex-grow: 1; font-weight: bold; }
 #controls-reset.enabled, #controls-apply { opacity: 1; cursor: pointer; }
 
+#credit-overlay
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#credit-box
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #d2d2d2;
+    padding: .5vh;
+    border-radius: 2vh;
+    font-size: 90%;
+    font-variant: small-caps;
+}
+
 #image-overlay
 {
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;

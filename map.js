@@ -148,8 +148,12 @@ let SetSelectedDen = function(den)
     const denData = selectedDen.denData;
     document.getElementById('details-thumbnail').src = ('th/'+denData.id+'.jpg');
     document.getElementById('details-title').innerText = denData.name;
-    document.getElementById('details-common-title').innerText = ('Red Beam - Pool #' + denData.commonPool);
-    document.getElementById('details-rare-title').innerText = ('Purple Beam - Pool #' + denData.rarePool);
+    let commonTitle = document.getElementById('details-common-title');
+    let rareTitle = document.getElementById('details-rare-title');
+    commonTitle.innerText = ('Red Beam - Pool #' + denData.commonPool);
+    commonTitle.href = ('https://www.serebii.net/swordshield/maxraidbattles/den'+denData.commonPool+'.shtml');
+    rareTitle.innerText = ('Purple Beam - Pool #' + denData.rarePool);
+    rareTitle.href = ('https://www.serebii.net/swordshield/maxraidbattles/den'+denData.rarePool+'.shtml');
     
     for (const type of ['common','rare'])
     {
@@ -159,6 +163,7 @@ let SetSelectedDen = function(den)
         {
             const spawnDatas = poolData[i];
             const box = document.getElementById('details-button-'+type+'-'+i);
+            box.href = ('https://www.serebii.net/swordshield/maxraidbattles/den'+poolId+'.shtml');
             if ((spawnDatas.length === 1) || (activeFilter.version !== null))
             {
                 const spawnData = spawnDatas[((spawnDatas.length === 2) && activeFilter.version)?1:0];
@@ -423,8 +428,9 @@ let Load = function()
             for (const colIndex of [0,1,2,3])
             {
                 const index = (rowIndex*4)+colIndex;
-                let button = make('div','details-button',row);
+                let button = make('a','details-button',row);
                 button.id = ('details-button-'+type+'-'+index);
+                button.target = '_blank';
                 
                 const s1container = make('div','details-species1',button);
                 make('img','details-species-bg',s1container).src = 'icon/ver_sword.png';

@@ -1,7 +1,7 @@
 body
 {
     position: relative;
-    width: 43vh;
+    min-width: 43vh;
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
@@ -17,7 +17,15 @@ body
     right: 0;
     bottom: 0;
 }
+#map
+{
+    width: 43vh;
+    left: 50%;
+    margin-left: -21.5vh;
+}
+#controls-close, #details-close { width: calc(50vw - 11.5vh); }
 
 #controls:not(.visible), #details:not(.visible) { display: none; }
 
 .den-circle1 { display: none; }
+.controls-label { font-size: 110%; }
