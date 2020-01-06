@@ -176,6 +176,7 @@ let SetSelectedDen = function(den)
                 box.classList.remove('sword-only','shield-only');
                 box.species1.removeAttribute('src');
                 box.species1.src = ('sprite/'+(spawnData.isGMax ? 'gmax_' : '')+spawnData.species+'.png');
+                box.species1.title = spawnData.species;
                 for (const [c,m] of STAR_CONTROLS)
                     box.classList.toggle(c,spawnData.stars === m);
             }
